@@ -98,8 +98,8 @@ class Calc extends React.Component {
   render() {
     return (
       <div class="flex h-screen justify-center text-center items-center bg-gray-200">
-        <div class="rounded-3xl shadow-2xl grid pt-6 pd-6 pl-10 pr-10 bg-white">
-          <h2 class="mt-6 text-3xl text-center font-bold text-grey-darkest-900">
+        <div class="rounded-3xl shadow-2xl py-20 px-20 bg-white">
+          <h2 class="py-6 text-3xl text-center font-bold text-grey-darkest-900">
             ikommpute
           </h2>
           <div>
