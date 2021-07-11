@@ -66,9 +66,21 @@ class Calc extends React.Component {
     });
   };
 
-  handleExponentSubmit = (event) => {
+  hanldePercentageSubmit = (event) => {
     this.setState({
-      submitValue: Math.exp,
+      submitValue: (this.state.input1 / 100) * this.state.input2,
+    });
+  };
+
+  handleLnSubmit = (event) => {
+    this.setState({
+      submitValue: this.state.input1 * Math.log(this.state.input2),
+    });
+  };
+
+  hanldeLogSubmit = (event) => {
+    this.setState({
+      submitValue: this.state.input1 * Math.log10(this.state.input2),
     });
   };
 
@@ -83,6 +95,12 @@ class Calc extends React.Component {
       return this.hanldeDivSubmit();
     } else if (this.state.input3 === "^") {
       return this.hanldePowSubmit();
+    } else if (this.state.input3 === "%") {
+      return this.hanldePercentageSubmit();
+    } else if (this.state.input3 === "ln" || this.state.input3 === "ln()") {
+      return this.handleLnSubmit();
+    } else if (this.state.input3 === "log" || this.state.input3 === "log()") {
+      return this.hanldeLogSubmit();
     }
   };
 
